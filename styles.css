@@ -1,4 +1,5 @@
 * { box-sizing: border-box; }
+a { text-decoration: none; }
 
 body {
     font-family: Arial, sans-serif;
@@ -151,36 +152,111 @@ main {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.card-group .big {
+.card p {
+    text-align: justify;
+    margin: 0;
+}
+
+/* Las tarjetas grandes tienen el doble de ancho */
+.card.big {
     flex: 2;
     min-width: calc(66.66% - 20px);
 }
 
-.clase-image {
+/* Las tarjetas clickable tiene una animación */
+a.card {
+    transition: transform 0.2s;
+}
+a.card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilizar las tarjetas que son clases */
+.card.class {
     background-size: cover;
     background-position: center;
-    height: 200px;
+    min-height: 200px;
+    flex-basis: min-content;
     position: relative;
-}
 
-.clase-details {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 100px 10px 10px 10px;
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)); /* Gradiente negro en la parte inferior */
-    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+    color: white;
 }
-
-.clase-details h3 {
+.card.class h3 {
     margin: 0;
     font-size: 18px;
 }
 
+/* Estilizar los botones dentro de las tarjetas */
+.card a {
+    width: fit-content;
+    padding: 5px 10px;
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+.card a:hover {
+    background-color: #000;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.card .anchor {
+    position: absolute;
+    visibility: hidden;
+    top: -20px;
+}
+
+/* Gradiente en la tarjeta para añadir contraste */
+.card.class::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.7));
+    content: "";
+}
+
+/* La clase dark añade un poco más de contraste */
+.card.class.dark::after {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+}
+
+/* Mover los contenidos de la tarjeta hacia arriba para que estén encima del gradiente negro */
+.card.class * {
+    z-index: 1;
+}
+
 /* ESTILIZAR OFERTAS ESPECIALES */
 
-.offer-card {
+.card.offer {
     background: #ffecec;
     text-align: center;
+    flex: 1;
+}
+
+/* ESTILIZAR TARJETAS CON INFORMACIÓN EXTENDIDA */
+
+.card.horizontal {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.card.horizontal div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card.horizontal div:last-child {
+    /*min-width: max-content;*/
+    min-width: 200px;
 }
