@@ -55,11 +55,11 @@ main {
     flex: 0 0 35%;
     min-width: 300px;
 
-    margin-top: 170px;
+    margin-top: 20vh;
     margin-bottom: 100px;
 
     position: sticky;
-    top: calc(170px + 10vh + 20px);
+    top: calc(20vh + 10vh + 20px);
 
     /* Posicionar elementos */
     display: flex;
