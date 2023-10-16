@@ -40,12 +40,13 @@ body {
 
 main {
     max-width: 1000px;
+    min-height: 90vh;
     margin: 0 auto;
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: flex-start;
+    align-items: center;
     gap: 50px;
 }
 
@@ -335,4 +336,75 @@ button {
 
 button:hover {
     background: #555;
+}
+
+/* ESTILIZAR HORARIOS */
+
+.horario-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 10px;
+    text-align: center;
+}
+
+.horario-grid div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hora-titulo, .dia-titulo {
+    font-weight: bold;
+}
+
+.horario-grid .hora {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.horario-grid .clase {
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+    background: linear-gradient(rgba(200, 200, 200, 0.8), rgba(240, 240, 240, 0.8));
+    border: 1px solid #ccc;
+}
+
+.horario-grid .clase.doble {
+    grid-row: span 2;
+}
+
+.horario-grid .clase.salsa {
+    background: linear-gradient(rgba(255, 200, 200, 0.8), rgba(255, 240, 240, 0.8));
+}
+.horario-grid .clase.bachata {
+    background: linear-gradient(rgba(200, 255, 200, 0.8), rgba(240, 255, 240, 0.8));
+}
+.horario-grid .clase.ballet {
+    background: linear-gradient(rgba(200, 200, 255, 0.8), rgba(240, 240, 255, 0.8));
+}
+.horario-grid .clase.hiphop {
+    background: linear-gradient(rgba(255, 255, 200, 0.8), rgba(255, 255, 240, 0.8));
+}
+.horario-grid .clase.tango {
+    background: linear-gradient(rgba(175, 175, 255, 0.8), rgba(215, 215, 255, 0.8));
+}
+.horario-grid .clase.breakdance {
+    background: linear-gradient(rgba(243, 220, 103, 0.8), rgba(255, 240, 200, 0.8));
+}
+.horario-grid .clase.padres {
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+}
+.horario-grid .clase.grupo {
+    background: linear-gradient(rgba(230, 230, 230, 0.8), rgba(255, 255, 255, 0.8));
+}
+.horario-grid .clase.principiantes {
+    background: linear-gradient(rgba(230, 230, 230, 0.8), rgba(255, 255, 255, 0.8));
+}
+.horario-grid .clase.parejas {
+    background: linear-gradient(rgba(230, 230, 230, 0.8), rgba(255, 255, 255, 0.8));
 }
