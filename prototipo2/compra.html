@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Academia de Baile DanceWorld</title>
+</head>
+<body>
+<header>
+    <h1><a href="index.html">Academia DanceWorld</a></h1>
+    <nav>
+        <ul>
+            <li><a href="clases.html">Clases</a></li>
+            <li><a href="horarios.html">Horarios</a></li>
+            <li><a href="bonos.html">Bonos</a></li>
+            <li><a href="profesores.html">Profesores</a></li>
+            <li><a href="comentarios.html">Comentarios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" id="close-popup">×</span>
+            <h3>¡Esta página es falsa!</h3>
+            <p>En una página real, se abriría una página de compra donde introducirías tus datos. Pero como
+                esta página es falsa, <br>se muestra esto en su lugar. Nuestros ingenieros están intentando resolver este problema en estos momentos.</p>
+        </div>
+    </section>
+    <section class="contacto-localizacion">
+        <div class="contacto-imagen">
+            <img src="../imgs/main.png" alt="Imagen de la academia">
+        </div>
+        <div class="contacto-info">
+            <p>123 Calle de la Danza,<br> Santiago de Compostela</p>
+            <h3>Contacto</h3>
+            <p>Teléfono: 123-456-789<br>
+                Correo: info@danceworld.com</p>
+        </div>
+    </section>
+    <section class="anotarse">
+        <h2>Comprar Bonos</h2>
+        <p>
+            Recuerda que también puedes matricularte en una clase y comprar bonos en persona.
+        </p>
+        <form>
+            <label for="nombre">Nombre y Apellidos (obligatorio):</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+            <label for="dni">DNI (obligatorio):</label>
+            <input type="text" id="dni" name="dni" placeholder="Tu DNI" required>
+
+            <label for="correo">Correo (obligatorio):</label>
+            <input type="email" id="correo" name="correo" placeholder="Tu correo" required>
+
+            <label for="bono">Tipo de bono:</label>
+            <select id="bono" name="bono">
+                <option value="normal" title="Bono Normal.">Normal</option>
+                <option value="diverso" title="Bono Diverso - Permite ir a clases de distinto tipo.">Diverso</option>
+                <option value="grupo" title="Bono Grupal - Permite ir a varias personas en grupo por un mejor precio.">Grupal</option>
+            </select>
+
+            <label for="cantidad-bonos">Número de bonos:</label>
+            <select id="cantidad-bonos" name="cantidad-bonos">
+                <option value="1">1</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+            </select>
+
+            <label for="tipo-clase">Tipo de clase:</label>
+            <select id="tipo-clase" name="tipo-clase">
+                <option value="salsa">Salsa</option>
+                <option value="bachata">Bachata</option>
+                <option value="ballet">Ballet</option>
+                <option value="tango">Tango</option>
+                <option value="breakdance">Breakdance</option>
+                <option value="hip-hop">Hip-Hop</option>
+                <option value="grupo">Clase en grupo</option>
+                <option value="principiantes">Clase para principiantes</option>
+                <option value="parejas">Clase para parejas</option>
+                <option value="padres">Clase con padres e hijos</option>
+            </select>
+
+            <label for="numero-personas">Número de personas:</label>
+            <input type="number" id="numero-personas" name="numero-personas" placeholder="Número de personas" min="1" value="1" disabled>
+
+            <div class="total">
+                <button type="submit">Comprar</button>
+                <div id="total-value">Total: 0.00€</div>
+            </div>
+        </form>
+    </section>
+</main>
+<script src="compra.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>
