@@ -19,24 +19,45 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
     height: 10vh;
 }
 
+header h1 {
+    margin: 20px;
+}
+
 header nav {
-    flex: 1;
+    height: 100%;
+
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
 }
 
 nav ul {
+    margin: 0;
     list-style: none;
     display: flex;
-    gap: 20px;
     justify-content: flex-end;
 }
 
 nav ul li {
-    min-width: fit-content;
+    flex: 1;
     text-align: center;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+}
+
+nav ul li:first-child { padding-left: 20px; }
+nav ul li:nth-last-child(2) {
+    padding-right: 20px;
+}
+nav ul li:last-child {
+    background-color: #444;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 header a {
@@ -77,6 +98,7 @@ main {
     position: sticky;
     align-self: flex-start;
     top: calc(50vh - 200px);
+    margin-bottom: 200px;
 
     display: flex;
     flex-direction: column;
@@ -125,43 +147,6 @@ main {
     gap: 20px;
 }
 
-/* ESTILIZAR PROMO 5 EUROS */
-
-.promo-info {
-    position: sticky;
-    top: 100px;
-    margin-top: -20px;
-    z-index: 100;
-}
-
-.promo-info div {
-    position: absolute;
-    right: -5px;
-    width: 100px;
-    height: 100px;
-    rotate: 15deg;
-
-    background-image: url('../imgs/star.png');
-    filter: drop-shadow(5px 5px 5px #222);
-
-    background-size: cover;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.promo-info .overlay-text {
-    position: relative;
-    top: 10px;
-
-    color: #333;
-    font-size: 16px;
-    margin: 0;
-    padding: 5px;
-}
-
 /* ESTILIZAR CLASES OFERTADAS */
 
 .card-group {
@@ -172,7 +157,7 @@ main {
 
 .card {
     flex: 1;
-    min-width: calc(max(33.33% - 20px, 100px));
+    min-width: calc(max(33.33% - 20px, 150px));
     background: #333;
     position: relative;
     border-radius: 10px;
