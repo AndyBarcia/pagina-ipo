@@ -396,10 +396,17 @@ button:hover {
     text-align: center;
 }
 
-.horario-grid div {
+.horario-grid a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: black;
+    font-size: 1.1em;
+    transition: transform 0.2s;
+}
+
+.horario-grid a:hover {
+    transform: scale(1.05);
 }
 
 .hora-titulo, .dia-titulo {
@@ -428,34 +435,34 @@ button:hover {
 }
 
 .horario-grid .clase.salsa {
-    background: linear-gradient(rgba(255, 200, 200, 0.8), rgba(255, 240, 240, 0.8));
+    background: linear-gradient(#D46A6A, #FFAAAA);
 }
 .horario-grid .clase.bachata {
-    background: linear-gradient(rgba(200, 255, 200, 0.8), rgba(240, 255, 240, 0.8));
+    background: linear-gradient(#D4A06A, #FFD5AA);
 }
 .horario-grid .clase.ballet {
-    background: linear-gradient(rgba(200, 200, 255, 0.8), rgba(240, 240, 255, 0.8));
+    background: linear-gradient(#447684, #6B949F);
 }
-.horario-grid .clase.hiphop {
-    background: linear-gradient(rgba(255, 255, 200, 0.8), rgba(255, 255, 240, 0.8));
+.horario-grid .clase.hip-hop {
+    background: linear-gradient(#55AA55, #88CC88);
 }
 .horario-grid .clase.tango {
-    background: linear-gradient(rgba(175, 175, 255, 0.8), rgba(215, 215, 255, 0.8));
+    background: linear-gradient(#D4B86A, #FFE8AA);
 }
 .horario-grid .clase.breakdance {
-    background: linear-gradient(rgba(243, 220, 103, 0.8), rgba(255, 240, 200, 0.8));
+    background: linear-gradient(#545993, #7E82B1);
 }
 .horario-grid .clase.padres {
-    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+    background: linear-gradient(#D4CD6A, #FFF9AA);
 }
 .horario-grid .clase.grupo {
-    background: linear-gradient(rgba(230, 230, 230, 0.8), rgba(255, 255, 255, 0.8));
+    background: linear-gradient(#6D4E90, #9078AD);
 }
 .horario-grid .clase.principiantes {
-    background: linear-gradient(rgba(230, 230, 230, 0.8), rgba(255, 255, 255, 0.8));
+    background: linear-gradient(#AEC965, #DCF1A1);
 }
 .horario-grid .clase.parejas {
-    background: linear-gradient(rgba(230, 230, 230, 0.8), rgba(255, 255, 255, 0.8));
+    background: linear-gradient(#A15089, #C180AD);
 }
 
 /* ESTILIZAR COMENTARIOS */
