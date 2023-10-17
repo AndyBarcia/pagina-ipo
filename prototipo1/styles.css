@@ -141,7 +141,7 @@ main {
     height: 100px;
     rotate: 15deg;
 
-    background-image: url('imgs/star.png');
+    background-image: url('../imgs/star.png');
     filter: drop-shadow(5px 5px 5px #222);
 
     background-size: cover;

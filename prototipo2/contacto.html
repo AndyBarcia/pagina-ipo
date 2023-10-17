@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Academia de Baile DanceWorld</title>
+</head>
+<body>
+<header>
+    <h1><a href="index.html">Academia DanceWorld</a></h1>
+    <nav>
+        <ul>
+            <li><a href="clases.html">Clases</a></li>
+            <li><a href="horarios.html">Horarios</a></li>
+            <li><a href="bonos.html">Bonos</a></li>
+            <li><a href="profesores.html">Profesores</a></li>
+            <li><a href="comentarios.html">Comentarios</a></li>
+            <li><a class="active" href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" id="close-popup">×</span>
+            <h3>¡Se ha enviado tu consulta!</h3>
+            <p>Gracias por ponerte en contacto con nosotros. Te responderemos pronto.</p>
+        </div>
+    </section>
+    <section class="contacto-localizacion">
+        <div class="contacto-imagen">
+            <img src="../imgs/main.png" alt="Imagen de la academia">
+        </div>
+        <div class="contacto-info">
+            <p>123 Calle de la Danza,<br> Santiago de Compostela</p>
+            <h3>Contacto</h3>
+            <p>Teléfono: 123-456-789<br>
+            Correo: info@danceworld.com</p>
+        </div>
+    </section>
+    <section class="anotarse">
+        <h2>Ponerse en contacto</h2>
+        <p>
+            Para pedir información sobre las clases, los bonos, los horarios, o si tienes cualquier duda sobre la
+            academia, ponte en contacto con nosotros por teléfono (123-145-789), por
+            correo (info@danceworld.com) o mediante este formulario:
+        </p>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+
+            <label for="correo">Correo (obligatorio):</label>
+            <input type="email" id="correo" name="correo" placeholder="Tu correo" required>
+
+            <label for="consulta">Tipo de consulta:</label>
+            <select id="consulta" name="consulta">
+                <option value="general">Pregunta general</option>
+                <option value="clases">Consulta sobre clases</option>
+                <option value="bonos">Consulta sobre bonos</option>
+                <option value="horarios">Consulta sobre horarios</option>
+                <option value="profesores">Consulta sobre profesores</option>
+            </select>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu duda aquí"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</main>
+<script src="popup.js"></script>
+</body>
+</html>
